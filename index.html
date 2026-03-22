@@ -276,34 +276,43 @@
         <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">Last updated: March 2026</p>
     </footer>
 
-    <!-- Visitor Counter -->
-    <div id="visitor-counter" class="visitor-counter">
-        <div class="counter-content">
-            <p>Visitors</p>
-            <span id="counter-value">0</span>
-        </div>
+  <!-- Visitor Counter -->
+<div id="visitor-counter" style="
+    display:flex;
+    justify-content:center;
+    margin:30px 0;
+">
+
+    <div style="
+        background: linear-gradient(135deg, #1a237e, #2f22f2);
+        color:white;
+        padding:20px 30px;
+        border-radius:12px;
+        text-align:center;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        width:200px;
+    ">
+        <p style="
+            margin:0;
+            font-family:Arial, sans-serif;
+            font-size:14px;
+            letter-spacing:1px;
+            opacity:0.9;
+        ">
+            VISITORS
+        </p>
+
+        <span id="counter-value" style="
+            display:block;
+            font-size:32px;
+            font-weight:bold;
+            margin-top:8px;
+            font-family:'Georgia', serif;
+        ">
+            0
+        </span>
     </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_TRACKING_ID');
-
-        // Visitor Counter Logic
-        (function() {
-            const counterKey = 'visitorCount';
-            let count = localStorage.getItem(counterKey);
-            
-            if (!count) {
-                count = 0;
-            }
-            count = parseInt(count) + 1;
-            localStorage.setItem(counterKey, count);
-            
-            document.getElementById('counter-value').textContent = count;
-        })();
-    </script>
+</div>
 </body>
 </html>
