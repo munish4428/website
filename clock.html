@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+        }
+        .clock {
+            background: #3c4043;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .time {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <h1>Digital Clock</h1>
+        <div class="time" id="utc"></div>
+        <div class="time" id="ist"></div>
+        <div class="time" id="est"></div>
+        <div class="time" id="pst"></div>
+        <div class="time" id="gmt"></div>
+    </div>
+    <script>
+        function updateClocks() {
+            const utcOptions = { timeZone: 'UTC', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const istOptions = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const estOptions = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const pstOptions = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            const gmtOptions = { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            
+            document.getElementById('utc').innerText = 'UTC: ' + new Intl.DateTimeFormat('en-US', utcOptions).format(new Date());
+            document.getElementById('ist').innerText = 'IST: ' + new Intl.DateTimeFormat('en-US', istOptions).format(new Date());
+            document.getElementById('est').innerText = 'EST: ' + new Intl.DateTimeFormat('en-US', estOptions).format(new Date());
+            document.getElementById('pst').innerText = 'PST: ' + new Intl.DateTimeFormat('en-US', pstOptions).format(new Date());
+            document.getElementById('gmt').innerText = 'GMT: ' + new Intl.DateTimeFormat('en-US', gmtOptions).format(new Date());
+        }
+        setInterval(updateClocks, 1000);
+        updateClocks();
+    </script>
+</body>
+</html>
