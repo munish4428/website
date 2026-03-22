@@ -15,37 +15,70 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header" class="header">
-        <img src="pp.jpg" alt="Dr. Munish Bhatia Profile Photo"
-    style="
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid #1a237e;
-    ">
-       <h1 style="
-    color: #1a237e;
-    font-family: 'Georgia', serif;
-    font-size: 42px;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+  <header style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:25px;
+    background:#f5f7fa;
 ">
-    Dr. Munish Bhatia
-</h1>
-        <nav class="navbar" aria-label="Main Navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#patents">Patents</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- Profile Image -->
+    <img src="pp.jpg" alt="Dr. Munish Bhatia"
+    style="
+        width:130px;
+        height:130px;
+        border-radius:50%;
+        object-fit:cover;
+        border:3px solid #1a237e;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    ">
+
+    <!-- Text Content -->
+    <div>
+
+        <h1 style="
+            margin:0;
+            color:#1a237e;
+            font-family:'Georgia', serif;
+            font-size:34px;
+        ">
+            Dr. Munish Bhatia
+        </h1>
+
+        <p style="
+            margin:5px 0;
+            color:#555;
+            font-family:Arial, sans-serif;
+            font-size:16px;
+        ">
+            Assistant Professor | NIT Kurukshetra
+        </p>
+
+        <!-- Badges -->
+        <div style="margin-top:8px;">
+
+            <a href="https://orcid.org/0000-0001-9878-7646" target="_blank"
+            style="background:#a6ce39;color:white;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:13px;margin-right:5px;">
+                ORCID
+            </a>
+
+            <a href="#" target="_blank"
+            style="background:#4285F4;color:white;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:13px;margin-right:5px;">
+                Google Scholar
+            </a>
+
+            <a href="#" target="_blank"
+            style="background:#ff6f00;color:white;padding:6px 12px;border-radius:20px;text-decoration:none;font-size:13px;">
+                Scopus
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
 
     <main>
         <section id="home" class="section">
