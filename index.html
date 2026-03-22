@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Munish Bhatia's Academic Portfolio showcasing research, publications, and achievements.">
+    <meta name="keywords" content="Dr. Munish Bhatia, academic portfolio, research, publications, achievements">
+    <meta name="author" content="Dr. Munish Bhatia">
+    <meta property="og:title" content="Dr. Munish Bhatia - Academic Portfolio">
+    <meta property="og:description" content="Explore my research, publications, patents, and achievements.">
+    <meta property="og:type" content="website">
     <title>Dr. Munish Bhatia - Academic Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="header" class="header">
         <h1>Dr. Munish Bhatia</h1>
-        <nav>
+        <nav class="navbar" aria-label="Main Navigation">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -22,51 +29,73 @@
         </nav>
     </header>
     <main>
-        <section id="home">
+        <section id="home" class="section">
             <h2>Home</h2>
             <p>Welcome to my academic portfolio. Here you can find detailed information about my research, publications, and professional achievements.</p>
         </section>
-        <section id="about">
+        <section id="about" class="section">
             <h2>About</h2>
             <p>I am Dr. Munish Bhatia, a researcher focusing on [Your Research Areas]. I have a passion for advancing knowledge in the field of [Your Specific Interests].</p>
         </section>
-        <section id="research">
+        <section id="research" class="section">
             <h2>Research Interests</h2>
-            <ul>
+            <ul class="interests-list">
                 <li>[Interest 1]</li>
                 <li>[Interest 2]</li>
                 <li>[Interest 3]</li>
             </ul>
         </section>
-        <section id="publications">
+        <section id="publications" class="section">
             <h2>Publications</h2>
-            <ul>
+            <ul class="publications-list">
                 <li>[Publication 1]</li>
                 <li>[Publication 2]</li>
                 <li>[Publication 3]</li>
             </ul>
         </section>
-        <section id="patents">
+        <section id="patents" class="section">
             <h2>Patents</h2>
-            <ul>
+            <ul class="patents-list">
                 <li>[Patent 1]</li>
                 <li>[Patent 2]</li>
             </ul>
         </section>
-        <section id="achievements">
+        <section id="achievements" class="section">
             <h2>Achievements</h2>
-            <ul>
+            <ul class="achievements-list">
                 <li>[Achievement 1]</li>
                 <li>[Achievement 2]</li>
             </ul>
         </section>
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>You can reach me at <a href="mailto:munishbhatia90@gmail.com">munishbhatia90@gmail.com</a> or through my LinkedIn profile.</p>
+            <p>You can reach me at <a href="mailto:munishbhatia90@gmail.com">munishbhatia90@gmail.com</a></p>
+            <nav class="social-links" aria-label="Social Links">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://github.com/munish4428" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </nav>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2026 Dr. Munish Bhatia</p>
+    <footer id="footer" class="footer">
+        <p>&copy; 2026 Dr. Munish Bhatia. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
 </body>
 </html>
