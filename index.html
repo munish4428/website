@@ -134,12 +134,34 @@ ORCID: https://orcid.org/0000-0001-9878-7646
         <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">Last updated: March 2026</p>
     </footer>
 
+    <!-- Visitor Counter -->
+    <div id="visitor-counter" class="visitor-counter">
+        <div class="counter-content">
+            <p>Visitors</p>
+            <span id="counter-value">0</span>
+        </div>
+    </div>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'GA_TRACKING_ID');
+
+        // Visitor Counter Logic
+        (function() {
+            const counterKey = 'visitorCount';
+            let count = localStorage.getItem(counterKey);
+            
+            if (!count) {
+                count = 0;
+            }
+            count = parseInt(count) + 1;
+            localStorage.setItem(counterKey, count);
+            
+            document.getElementById('counter-value').textContent = count;
+        })();
     </script>
 </body>
 </html>
