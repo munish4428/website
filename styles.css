@@ -106,3 +106,13 @@ body {
         text-align: center;
     }
 }
+
+.openings-content {
+    text-align: left;   /* forces left alignment */
+}
+
+.openings-content ol,
+.openings-content ul {
+    margin-left: 20px;  /* proper indentation */
+    padding-left: 10px;
+}
