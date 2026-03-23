@@ -510,3 +510,8 @@ main {
         text-align: center;
     }
 }
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    filter: invert(1);
+}
