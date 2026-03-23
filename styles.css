@@ -510,8 +510,9 @@ main {
         text-align: center;
     }
 }
-.social-icons img {
+.social-icons a img {
     width: 22px;
     height: 22px;
+    object-fit: contain;
     filter: invert(1);
 }
