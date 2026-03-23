@@ -22,7 +22,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 60px;
-    padding: 50px 80px;
+
+    max-width: 1100px;   /* controls width */
+    margin: 0 auto;      /* center page */
+
+    padding: 60px 40px;  /* inner spacing */
 }
 
 /* LEFT SIDE */
