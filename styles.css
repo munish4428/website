@@ -369,3 +369,52 @@ main {
 .section {
     animation: fadeIn 0.6s ease-out;
 }
+/* ================= HOME SECTION (NEW) ================= */
+
+#home {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+#home .left {
+    flex: 1;
+    text-align: center;
+}
+
+#home .left img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+#home .icons span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    margin: 8px;
+}
+
+.icon-blue { background: #4285F4; }
+.icon-green { background: #2e7d32; }
+.icon-linkedin { background: #0A66C2; }
+
+#home .right {
+    flex: 2;
+}
+
+#home .right h2 {
+    color: #1a237e;
+}
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+}
