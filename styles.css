@@ -335,6 +335,7 @@ main {
 
     .section h2 {
         font-size: 1.3rem;
+        color: var(--text-dark);
     }
 
     .section p {
