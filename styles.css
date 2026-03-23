@@ -111,7 +111,7 @@ main {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: blue;
     position: relative;
     padding-bottom: 15px;
 }
