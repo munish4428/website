@@ -1,73 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Teaching - Dr. Munish Bhatia</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching - Dr. Munish Bhatia</title>
 
-  <style>
-    body {
-      background: #f5f6f7;
-      margin-left: 220px; /* space for sidebar */
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+/* PAGE CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    color: #0f766e;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.teaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #0f766e;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* LIST */
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* SECTION */
+.section {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.section h2 {
+    color: #0f766e;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0b4f54;
+    color: white;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-box h3::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 2px;
+    background: #5fa9dd;
+    margin: 8px auto 0;
+}
+
+.footer-box p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #d1e5e7;
+    margin-top: 10px;
+}
+
+.footer-box iframe {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #cbd5d6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .teaching-grid {
+        grid-template-columns: 1fr;
     }
 
-    h1 {
-      text-align: center;
-      color: #0b7a75;
-      margin-top: 30px;
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 40px;
-      flex-wrap: wrap;
+        padding: 30px 20px;
     }
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      width: 420px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+</style>
 
-    .card h2 {
-      color: #0b7a75;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .card ul {
-      margin-top: 10px;
-      padding-left: 18px;
-    }
-
-    .card ul li {
-      margin-bottom: 8px;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- HEADER LOAD -->
-<div id="header"></div>
+<!-- TOPBAR -->
+<div class="topbar">
+    <span class="menu-icon" onclick="openMenu()">☰</span>
+    Dr. Munish Bhatia
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+
+    <a href="index.html">Home</a>
+    <a href="#">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="publication.html">Publications</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
 
 <h1>Teaching Experience</h1>
 
-<div class="container">
+<div class="teaching-grid">
 
-  <!-- NIT -->
   <div class="card">
     <h2>Assistant Professor (Grade-I)<br>
     NIT Kurukshetra [Oct 2022 – Present]</h2>
@@ -87,7 +195,6 @@
     </ul>
   </div>
 
-  <!-- LPU -->
   <div class="card">
     <h2>Assistant Professor<br>
     LPU Punjab [2019 – 2022]</h2>
@@ -107,7 +214,6 @@
 
 </div>
 
-<!-- PHILOSOPHY -->
 <div class="section">
   <h2>Teaching Philosophy</h2>
   <p>
@@ -122,7 +228,6 @@
   </ul>
 </div>
 
-<!-- SUPERVISION -->
 <div class="section">
   <h2>Student Supervision</h2>
   <ul>
@@ -132,18 +237,51 @@
   </ul>
 </div>
 
-<!-- FOOTER LOAD -->
-<div id="footer"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>About</h3>
+            <p>
+                Dr. Munish Bhatia is an Assistant Professor at NIT Kurukshetra.
+                His research focuses on Digital Twin, IoT, AI, and Quantum Computing.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>
+                Email: munish@nitkkr.ac.in<br>
+                NIT Kurukshetra, Haryana, India
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Location</h3>
+            <iframe src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Dr. Munish Bhatia | Academic Portfolio
+    </div>
+
+</div>
 
 <!-- SCRIPT -->
 <script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+function openMenu() {
+    document.getElementById("sidebar").style.left = "0";
+}
 
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
+function closeMenu() {
+    document.getElementById("sidebar").style.left = "-260px";
+}
 </script>
 
 </body>
