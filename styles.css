@@ -9,12 +9,32 @@ body {
     background: #f3f4f6;
 }
 
-/* TOP BAR */
+/* TOP BAR (UPDATED) */
 .topbar {
+    position: relative;
     background: #0f766e;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 20px;
     font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* MENU ICON (NEW - replaces menu-btn) */
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* REMOVE OLD MENU BUTTON EFFECT */
+.menu-btn {
+    display: none;
 }
 
 /* MAIN LAYOUT */
