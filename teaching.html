@@ -7,6 +7,7 @@
   <style>
     body {
       background: #f5f6f7;
+      margin-left: 220px; /* space for sidebar */
     }
 
     h1 {
@@ -37,10 +38,6 @@
       margin-bottom: 10px;
     }
 
-    .card p {
-      margin: 5px 0;
-    }
-
     .card ul {
       margin-top: 10px;
       padding-left: 18px;
@@ -63,11 +60,14 @@
 
 <body>
 
+<!-- HEADER LOAD -->
+<div id="header"></div>
+
 <h1>Teaching Experience</h1>
 
 <div class="container">
 
-  <!-- NIT CARD -->
+  <!-- NIT -->
   <div class="card">
     <h2>Assistant Professor (Grade-I)<br>
     NIT Kurukshetra [Oct 2022 – Present]</h2>
@@ -87,7 +87,7 @@
     </ul>
   </div>
 
-  <!-- LPU CARD -->
+  <!-- LPU -->
   <div class="card">
     <h2>Assistant Professor<br>
     LPU Punjab [2019 – 2022]</h2>
@@ -131,6 +131,20 @@
     <li>Supporting research publications and development</li>
   </ul>
 </div>
+
+<!-- FOOTER LOAD -->
+<div id="footer"></div>
+
+<!-- SCRIPT -->
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
 
 </body>
 </html>
