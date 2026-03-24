@@ -60,22 +60,22 @@
 /* ===== HERO ===== */
 .hero-flex {
     display: flex;
-    gap: 50px;
     align-items: center;
-    background: #eef3f3;
-    padding: 30px;
-    border-radius: 10px;
+    gap: 40px;
 }
 
 /* PROFILE */
-.profile {
+.profile 
+    flex: 0.3;
     text-align: center;
 }
 
 .profile img {
-    width: 160px;
+    width: 180px;   /* increase size */
+    height: 180px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .socials a {
@@ -96,6 +96,9 @@
 .bio p {
     margin-bottom: 12px;
     line-height: 1.6;
+}
+.bio {
+    flex: 0.7;
 }
 
 /* ===== SECTIONS ===== */
@@ -194,15 +197,22 @@
 }
 
 /* SOCIAL ICONS */
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 .socials img {
-    width: 16px;
-    margin: 8px;
-    filter: grayscale(100%);
+    width: 22px;   /* 🔥 THIS FIXES YOUR ISSUE */
+    height: 22px;
+    opacity: 0.8;
     transition: 0.3s;
 }
 
 .socials img:hover {
-    filter: none;
+    opacity: 1;
     transform: scale(1.1);
 }
 
