@@ -1,388 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research | Dr. Munish Bhatia</title>
-
-<style>
-
-/* ===== BASE ===== */
-body {
-    margin: 0;
-    padding-top: 60px;
-    background: #f5f7f7;
-    font-family: Arial, sans-serif;
-}
-
-/* ===== TOPBAR ===== */
-.topbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background: #0f7a73;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    z-index: 1000;
-}
-
-.menu-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 260px;
-    height: 100%;
-    background: #117c76;
-    padding-top: 60px;
-    transition: 0.3s;
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.sidebar a:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-
-/* ===== MAIN ===== */
-.section {
-    padding: 60px 20px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* HEADINGS */
-.main-title {
-    text-align: center;
-    color: #0f766e;
-    margin-bottom: 20px;
-}
-
-.section-label {
-    text-align: center;
-    color: #888;
-    font-size: 14px;
-}
-
-/* SECTION TITLE */
-.section-title {
-    font-size: 20px;
-    color: #0f766e;
-    margin-top: 30px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* LIST */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* ===== FOOTER FULL WIDTH ===== */
-.footer {
-    background: #0b4f54;
-    color: white;
-    padding: 60px 20px;
-
-    /* 🔥 FORCE FULL WIDTH */
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
-
-/* GRID LAYOUT */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;          /* IMPORTANT: align top */
-    gap: 60px;
-
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* EACH BOX */
-.footer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* HEADINGS */
-.footer-box h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-/* PERFECT UNDERLINE (same width for all) */
-.footer-box h3::after {
-    content: "";
-    display: block;
-    width: 160px;        /* SAME WIDTH FOR ALL */
-    height: 2px;
-    background: #5fa9dd;
-    margin: 8px auto 0;
-}
-
-/* TEXT */
-.footer-box p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #d1e5e7;
-    margin-top: 10px;
-}
-
-/* MAP */
-.footer-box iframe {
-    width: 100%;
-    max-width: 300px;   /* CONTROL SIZE */
-    height: 180px;
-    border: none;
-    border-radius: 12px;
-    margin-top: 10px;
-}
-
-/* COPYRIGHT */
-.footer .copyright {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #cbd5d6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Dr. Munish Bhatia</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-<span class="menu-icon" onclick="openMenu()">☰</span>
-Dr. Munish Bhatia
-</div>
-
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-<span class="close-btn" onclick="closeMenu()">×</span>
-<a href="index.html">Home</a>
-<a href="research.html">Research</a>
-<a href="teaching.html">Teaching</a>
-<a href="publications.html">Publications</a>
-<a href="outreach.html">Outreach</a>
-<a href="services.html">Services</a>
-<a href="people.html">People</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<!-- MAIN CONTENT -->
-<section class="section">
-<div class="container">
-
-<header class="page-header">
-<p class="section-label">Academic Profile</p>
-<h1 class="main-title">Research Statement</h1>
-
-<div class="card">
-<p class="intro-text">
-Dr. Munish Bhatia’s research focuses on the development of intelligent, secure, and scalable computational frameworks for next-generation systems, with a strong emphasis on Digital Twin technologies, Internet of Things (IoT), Artificial Intelligence, and Cloud-Fog Computing.
-</p>
-</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="header__logo">Dr. Munish <span>Bhatia</span></a>
+        <nav class="header__nav">
+            <a href="index.html">Home</a>
+            <a href="research.html" class="active">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="outreach.html">Outreach</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header__menu-btn" aria-label="Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
 </header>
 
-<!-- Research Overview -->
-<div class="section-title">📘 Research Overview</div>
-<div class="card">
+<nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="publications.html">Publications</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-<p>
-His work aims to bridge the gap between theoretical models and real-world industrial and societal applications.
-His research particularly explores AI-driven decision-making, secure data processing, and predictive analytics in cyber-physical systems.
-A significant portion of his work is dedicated to Digital Twin-based modeling and simulation, enabling real-time monitoring,
-optimization, and intelligent control of complex infrastructures such as smart cities, healthcare systems, and industrial environments.
-</p>
+<!-- CONTENT -->
+<main class="page-enter">
+    <div class="container">
 
-<p>
-He is also actively working on quantum computing-inspired optimization techniques and game-theoretic models to enhance system efficiency,
-security, and resilience in distributed environments. His research integrates simulation tools, machine learning models,
-and scalable architectures to address emerging challenges in sustainable and intelligent computing.
-</p>
+        <div class="page-header">
+            <span class="page-label">Academic Profile</span>
+            <h1>Research</h1>
+        </div>
 
-<p>
-With a strong publication record in leading journals such as IEEE, Elsevier, Springer, and ACM, Dr. Bhatia is committed to advancing
-data-driven, secure, and adaptive systems for future technologies including Industry 4.0, 5G/6G networks, and smart infrastructure.
-</p>
-
-</div>
-
-<!-- Interests + Vision -->
-<div class="grid">
-
-<div class="card">
-<h2>Research Interests</h2>
-<ul>
-<li>Digital Twin Systems for Smart Infrastructure and Industry 4.0</li>
-<li>Artificial Intelligence and Machine Learning for IoT Applications</li>
-<li>Secure Cloud-Fog and Edge Computing Architectures</li>
-<li>Quantum Computing-inspired Optimization Techniques</li>
-<li>Game-Theoretic Models for Cyber-Physical Systems</li>
-<li>Data-driven Predictive Analytics for Smart Healthcare and Cities</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Research Vision</h2>
-<p>
-The core vision of this research is to design adaptive, intelligent, and secure computational ecosystems that can respond to real-time challenges,
-optimize performance, and support sustainable innovation across industrial, urban, and healthcare domains.
-</p>
-</div>
-
-</div>
-
-<!-- Projects -->
-<div class="section-title">🚀 Research Projects</div>
-
-<div class="grid">
-
-<div class="card">
-<h3>Game-Theoretic Decision-Making in Digital Twin-Inspired Industry 4.0</h3>
-<p><strong>Funding Agency:</strong> ANRF (MATRICS)</p>
-<p><strong>Budget:</strong> ₹30,00,000</p>
-<p><strong>Status:</strong> Ongoing</p>
-</div>
-
-<div class="card">
-<h3>AI-assisted Cloud Framework for Early Flood Prediction</h3>
-<p><strong>Funding Agency:</strong> Microsoft (AI for Earth)</p>
-<p><strong>Support:</strong> $6000 Azure Credits</p>
-<p><strong>Focus:</strong> AI-based environmental prediction using cloud infrastructure</p>
-</div>
-
-<div class="card">
-<h3>Quantum Computing-inspired Vehicular Route Optimization</h3>
-<p><strong>Funding Agency:</strong> MeitY, Government of India</p>
-<p><strong>Support:</strong> $10,000 Amazon Quantum Credits</p>
-<p><strong>Focus:</strong> Optimization techniques for industrial and transport systems</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- ADDRESS -->
-        <div class="footer-box">
-            <h3>Address</h3>
+        <!-- Research Statement -->
+        <div class="card fade-in" style="margin-bottom: var(--spacing-xl);">
             <p>
-                Department of Computer Applications<br>
-                National Institute of Technology Kurukshetra<br>
-                Kurukshetra – 136119<br>
-                Haryana, India
+                Dr. Munish Bhatia's research focuses on the development of intelligent, secure, and scalable computational frameworks for next-generation systems, with a strong emphasis on Digital Twin technologies, Internet of Things (IoT), Artificial Intelligence, and Cloud-Fog Computing.
             </p>
         </div>
 
-        <!-- LOCATION -->
-        <div class="footer-box">
-            <h3>Location</h3>
-
-            <iframe 
-                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                loading="lazy">
-            </iframe>
+        <!-- Research Overview -->
+        <h3 class="section-heading fade-in">Research Overview</h3>
+        <div class="card fade-in">
+            <p style="margin-bottom: var(--spacing-md);">
+                His work aims to bridge the gap between theoretical models and real-world industrial and societal applications. His research particularly explores AI-driven decision-making, secure data processing, and predictive analytics in cyber-physical systems. A significant portion of his work is dedicated to Digital Twin-based modeling and simulation, enabling real-time monitoring, optimization, and intelligent control of complex infrastructures such as smart cities, healthcare systems, and industrial environments.
+            </p>
+            <p style="margin-bottom: var(--spacing-md);">
+                He is also actively working on quantum computing-inspired optimization techniques and game-theoretic models to enhance system efficiency, security, and resilience in distributed environments. His research integrates simulation tools, machine learning models, and scalable architectures to address emerging challenges in sustainable and intelligent computing.
+            </p>
+            <p>
+                With a strong publication record in leading journals such as IEEE, Elsevier, Springer, and ACM, Dr. Bhatia is committed to advancing data-driven, secure, and adaptive systems for future technologies including Industry 4.0, 5G/6G networks, and smart infrastructure.
+            </p>
         </div>
 
-        <!-- CONTACT -->
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <p>Email: munish.bhatia@nitkkr.ac.in</p>
-            <p>Website: munish4428.github.io</p>
+        <!-- Interests + Vision -->
+        <div class="card-grid card-grid--2" style="margin-top: var(--spacing-xl);">
+            <div class="card fade-in stagger-1">
+                <h3>Research Interests</h3>
+                <ul class="styled-list" style="margin-top: var(--spacing-md);">
+                    <li>Digital Twin Systems for Smart Infrastructure and Industry 4.0</li>
+                    <li>Artificial Intelligence and Machine Learning for IoT Applications</li>
+                    <li>Secure Cloud-Fog and Edge Computing Architectures</li>
+                    <li>Quantum Computing-inspired Optimization Techniques</li>
+                    <li>Game-Theoretic Models for Cyber-Physical Systems</li>
+                    <li>Data-driven Predictive Analytics for Smart Healthcare and Cities</li>
+                </ul>
+            </div>
+            <div class="card fade-in stagger-2">
+                <h3>Research Vision</h3>
+                <p style="margin-top: var(--spacing-md);">
+                    The core vision of this research is to design adaptive, intelligent, and secure computational ecosystems that can respond to real-time challenges, optimize performance, and support sustainable innovation across industrial, urban, and healthcare domains.
+                </p>
+            </div>
+        </div>
+
+        <!-- Research Projects -->
+        <h3 class="section-heading fade-in">Research Projects</h3>
+        <div class="card-grid card-grid--3">
+            <div class="card fade-in stagger-1">
+                <h4>Game-Theoretic Decision-Making in Digital Twin-Inspired Industry 4.0</h4>
+                <p style="margin-top: var(--spacing-sm);"><strong>Funding:</strong> ANRF (MATRICS)</p>
+                <p><strong>Budget:</strong> &#8377;30,00,000</p>
+                <p><strong>Status:</strong> Ongoing</p>
+            </div>
+            <div class="card fade-in stagger-2">
+                <h4>AI-assisted Cloud Framework for Early Flood Prediction</h4>
+                <p style="margin-top: var(--spacing-sm);"><strong>Funding:</strong> Microsoft (AI for Earth)</p>
+                <p><strong>Support:</strong> $6000 Azure Credits</p>
+                <p><strong>Focus:</strong> AI-based environmental prediction using cloud infrastructure</p>
+            </div>
+            <div class="card fade-in stagger-3">
+                <h4>Quantum Computing-inspired Vehicular Route Optimization</h4>
+                <p style="margin-top: var(--spacing-sm);"><strong>Funding:</strong> MeitY, Government of India</p>
+                <p><strong>Support:</strong> $10,000 Amazon Quantum Credits</p>
+                <p><strong>Focus:</strong> Optimization techniques for industrial and transport systems</p>
+            </div>
         </div>
 
     </div>
+</main>
 
-    <p class="copyright">
-        © 2026 Dr. Munish Bhatia. All Rights Reserved.
-    </p>
-
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4>Address</h4>
+                <p>Department of Computer Applications<br>National Institute of Technology Kurukshetra<br>Kurukshetra - 136119<br>Haryana, India</p>
+            </div>
+            <div class="footer__col">
+                <h4>Location</h4>
+                <iframe src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="NIT Kurukshetra Location"></iframe>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <p>Email: munish.bhatia@nitkkr.ac.in</p>
+                <p>Website: munish4428.github.io</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Dr. Munish Bhatia. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
-<script>
-function openMenu() {
-    document.getElementById("sidebar").style.left = "0";
-}
 
-function closeMenu() {
-    document.getElementById("sidebar").style.left = "-260px";
-}
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
+
