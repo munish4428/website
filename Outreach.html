@@ -179,37 +179,53 @@
       </p>
     </div>
 
-    <div class="footer-box">
-      <h3>Location</h3>
-      <iframe 
-        src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed">
-      </iframe>
+    <!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ADDRESS -->
+        <div class="footer-box">
+            <h3>Address</h3>
+            <p>
+                Department of Computer Applications<br>
+                National Institute of Technology Kurukshetra<br>
+                Kurukshetra – 136119<br>
+                Haryana, India
+            </p>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="footer-box">
+            <h3>Location</h3>
+
+            <iframe 
+                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: munish.bhatia@nitkkr.ac.in</p>
+            <p>Website: munish4428.github.io</p>
+        </div>
+
     </div>
 
-    <div class="footer-box">
-      <h3>Contact</h3>
-      <p>
-        Email: munish.bhatia@nitkkr.ac.in<br>
-        Website: munish4428.github.io
-      </p>
-    </div>
+    <p class="copyright">
+        © 2026 Dr. Munish Bhatia. All Rights Reserved.
+    </p>
 
-  </div>
-
-  <div class="copyright">
-    © 2026 Dr. Munish Bhatia. All Rights Reserved.
-  </div>
 </footer>
-
-<!-- SCRIPT -->
 <script>
-function toggleMenu() {
-  let sidebar = document.getElementById("sidebar");
-  if (sidebar.style.left === "0px") {
-    sidebar.style.left = "-260px";
-  } else {
-    sidebar.style.left = "0px";
-  }
+function openMenu() {
+    document.getElementById("sidebar").style.left = "0";
+}
+
+function closeMenu() {
+    document.getElementById("sidebar").style.left = "-260px";
 }
 </script>
 
