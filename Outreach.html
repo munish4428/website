@@ -1,439 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Outreach - Dr. Munish Bhatia</title>
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-/* ===== PAGE BASE ===== */
-body {
-    margin: 0;
-    padding-top: 60px;   /* 🔥 prevents overlap with topbar */
-    background: #f5f7f7;
-    font-family: Arial, sans-serif;
-}
-
-/* ===== TOPBAR ===== */
-.topbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: #0f7a73;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 18px;
-    z-index: 1000;
-}
-
-.menu-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 260px;
-    height: 100%;
-
-    background: #117c76;
-    padding-top: 60px;
-
-    transition: 0.3s ease;
-    z-index: 999;
-}
-
-.sidebar .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.2s;
-}
-
-.sidebar a:hover {
-    background: rgba(255,255,255,0.1);
-    padding-left: 30px;
-}
-
-/* ===== SECTION ===== */
-.highlights {
-    padding: 60px 20px;
-}
-
-.highlights-container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* MAIN TITLE */
-.main-title {
-    text-align: center;
-    color: #0f766e;
-    margin-bottom: 30px;
-}
-
-/* SECTION TITLE */
-.section-title {
-    font-size: 20px;
-    color: #0f766e;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-/* CARD STYLE */
-.card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    margin-top: 10px;
-    transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.card:hover {
-    transform: translateY(-3px);
-}
-
-/* PARAGRAPH */
-.card p {
-    line-height: 1.6;
-}
-
-/* LIST ITEMS */
-.highlight-item {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-/* YEAR */
-.highlight-item .year {
-    min-width: 70px;
-    font-weight: bold;
-    color: #0f766e;
-}
-
-/* TEXT */
-.highlight-item .text {
-    flex: 1;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-    background: #0b4f54;
-    color: white;
-    padding: 60px 20px;
-
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.footer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-box h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-box h3::after {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 2px;
-    background: #5fa9dd;
-    margin: 8px auto 0;
-}
-
-.footer-box p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #d1e5e7;
-}
-
-.footer-box iframe {
-    width: 100%;
-    max-width: 300px;
-    height: 180px;
-    border-radius: 12px;
-    border: none;
-}
-
-.footer .copyright {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #cbd5d6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outreach | Dr. Munish Bhatia</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<!-- TOPBAR -->
-<div class="topbar">
-  <span class="menu-icon" onclick="openMenu()">☰</span>
-  Dr. Munish Bhatia
-</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="header__logo">Dr. Munish <span>Bhatia</span></a>
+        <nav class="header__nav">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="outreach.html" class="active">Outreach</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header__menu-btn" aria-label="Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
+</header>
 
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-  <span class="close-btn" onclick="closeMenu()">×</span>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="teaching.html">Teaching</a>
-  <a href="publications.html">Publications</a>
-  <a href="outreach.html">Outreach</a>
-  <a href="services.html">Services</a>
-  <a href="resources.html">Resources</a>
-  <a href="people.html">People</a>
-  <a href="contact.html">Contact</a>
-</div>
+<nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="publications.html">Publications</a>
+    <a href="outreach.html" class="active">Outreach</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
+<!-- CONTENT -->
+<main class="page-enter">
+    <div class="container">
 
-<!-- MAIN CONTENT -->
-<section class="highlights">
-  <div class="highlights-container">
+        <div class="page-header">
+            <span class="page-label">Community</span>
+            <h1>Outreach</h1>
+            <p>Invited talks, expert lectures, faculty development programs, and conference engagements promoting emerging technologies.</p>
+        </div>
 
-    <h1 class="main-title">Outreach</h1>
+        <!-- Outreach Activities -->
+        <h3 class="section-heading fade-in">Outreach Activities</h3>
+        <div class="card fade-in">
+            <div class="timeline-item">
+                <span class="timeline-year">2024</span>
+                <span class="timeline-text">Session Chair &mdash; NCIESA-2024, NIT Kurukshetra</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Expert Lecture &mdash; AI and Smart Systems, NIT Delhi</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Expert Talk &mdash; Quantum Computing (AICTE-ATAL FDP), GNDEC</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Invited Talk &mdash; Machine Learning Trends (IEEE Program)</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2023</span>
+                <span class="timeline-text">Guest Lecture &mdash; Cloud Computing, LPU</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Guest Lecture &mdash; Research Writing, LPU</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Guest Lecture &mdash; Quantum Computing Applications, LPU</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Session Chair &mdash; ICCS-2023, LPU</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <span class="timeline-text">Technical sessions on IoT, ML, and Cloud Computing</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Lectures and training programs for students and faculty</span>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-year"></span>
+                <span class="timeline-text">Research mentoring, collaborations, and curriculum development</span>
+            </div>
+        </div>
 
-    <!-- Outreach Activities -->
-    <div class="section-title">📊 Outreach Activities</div>
-    <div class="card">
+        <!-- Focus Areas -->
+        <h3 class="section-heading fade-in">Focus Areas</h3>
+        <div class="card fade-in">
+            <ul class="styled-list">
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Digital Twin and Industry 4.0</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Quantum Computing</li>
+                <li>Research Methodology and Scientific Writing</li>
+            </ul>
+        </div>
 
-      <h2 style="text-align:center;">Outreach Activities</h2>
-
-      <p style="margin-bottom: 25px;">
-        Dr. Munish Bhatia actively contributes to the academic and research community through 
-        invited talks, expert lectures, faculty development programs, and conference engagements, 
-        promoting emerging technologies such as Artificial Intelligence, Digital Twin systems, 
-        and Quantum Computing.
-      </p>
-
-      <!-- 2024 -->
-      <div class="highlight-item">
-        <div class="year">2024</div>
-        <div class="text">Session Chair – NCIESA-2024, NIT Kurukshetra</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Expert Lecture – AI and Smart Systems, NIT Delhi</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Expert Talk – Quantum Computing (AICTE-ATAL FDP), GNDEC</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Invited Talk – Machine Learning Trends (IEEE Program)</div>
-      </div>
-
-      <!-- 2023 -->
-      <div class="highlight-item">
-        <div class="year">2023</div>
-        <div class="text">Guest Lecture – Cloud Computing, LPU</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Guest Lecture – Research Writing, LPU</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Guest Lecture – Quantum Computing Applications, LPU</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Session Chair – ICCS-2023, LPU</div>
-      </div>
-
-      <!-- 2022 -->
-      <div class="highlight-item">
-        <div class="year">2022</div>
-        <div class="text">Technical sessions on IoT, ML, and Cloud Computing</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Lectures and training programs for students and faculty</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year"></div>
-        <div class="text">Research mentoring, collaborations, and curriculum development</div>
-      </div>
+        <!-- Academic Engagement -->
+        <h3 class="section-heading fade-in">Academic & Community Engagement</h3>
+        <div class="card fade-in">
+            <ul class="styled-list">
+                <li>Promoting research awareness and innovation culture</li>
+                <li>Supporting faculty development programs (FDPs)</li>
+                <li>Encouraging industry-academia collaboration</li>
+                <li>Mentoring students for research publications</li>
+            </ul>
+        </div>
 
     </div>
-  </div>
-</section>
-
-
-<!-- FOCUS -->
-<section class="highlights">
-  <div class="highlights-container">
-
-    <div class="section-title">🎯 Outreach Focus Areas</div>
-    <div class="card">
-
-      <h2 style="text-align:center;">Outreach Focus Areas</h2>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Artificial Intelligence and Machine Learning</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Digital Twin and Industry 4.0</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Internet of Things (IoT)</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Quantum Computing</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Research Methodology and Scientific Writing</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ENGAGEMENT -->
-<section class="highlights">
-  <div class="highlights-container">
-
-    <div class="section-title">🤝 Academic & Community Engagement</div>
-    <div class="card">
-
-      <h2 style="text-align:center;">Academic & Community Engagement</h2>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Promoting research awareness and innovation culture</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Supporting faculty development programs (FDPs)</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Encouraging industry-academia collaboration</div>
-      </div>
-
-      <div class="highlight-item">
-        <div class="year">•</div>
-        <div class="text">Mentoring students for research publications</div>
-      </div>
-
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
-
-<div class="footer-container">
-
-<div class="footer-box">
-<h3>Address</h3>
-<p>
-Department of Computer Applications<br>
-NIT Kurukshetra, Haryana, India
-</p>
-</div>
-
-<div class="footer-box">
-<h3>Location</h3>
-<iframe src="https://maps.google.com/maps?q=NIT%20Kurukshetra&output=embed"></iframe>
-</div>
-
-<div class="footer-box">
-<h3>Contact</h3>
-<p>Email: munish.bhatia@nitkkr.ac.in</p>
-<p>Website: munish4428.github.io</p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 Dr. Munish Bhatia. All Rights Reserved.
-</p>
-
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4>Address</h4>
+                <p>Department of Computer Applications<br>NIT Kurukshetra<br>Haryana, India</p>
+            </div>
+            <div class="footer__col">
+                <h4>Location</h4>
+                <iframe src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="NIT Kurukshetra Location"></iframe>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <p>Email: munish.bhatia@nitkkr.ac.in</p>
+                <p>Website: munish4428.github.io</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Dr. Munish Bhatia. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
 
-<script>
-function openMenu() {
-    document.getElementById("sidebar").style.left = "0";
-}
-
-function closeMenu() {
-    document.getElementById("sidebar").style.left = "-260px";
-}
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
