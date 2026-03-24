@@ -64,30 +64,80 @@ ul {
 }
 
 /* TABLE */
+/* TABLE CONTAINER */
 .table-container {
-    overflow-x: auto;
+    overflow-x: hidden;   /* ❌ remove horizontal scroll */
 }
 
+/* TABLE */
 #pubTable {
     width: 100%;
     border-collapse: collapse;
-    min-width: 1200px;
+    table-layout: fixed;   /* 🔥 force columns to fit */
     background: white;
     border-radius: 10px;
     overflow: hidden;
 }
 
+/* HEADER */
 #pubTable thead {
     background: #0f766e;
     color: white;
 }
 
-#pubTable th, #pubTable td {
-    padding: 10px;
-    font-size: 13px;
+/* CELLS */
+#pubTable th, 
+#pubTable td {
+    padding: 6px;              /* 🔽 reduced spacing */
+    font-size: 12px;           /* 🔽 smaller text */
     border-bottom: 1px solid #eee;
+
+    word-wrap: break-word;     /* 🔥 wrap long text */
+    overflow-wrap: break-word;
 }
 
+/* COLUMN WIDTH CONTROL */
+#pubTable th:nth-child(1),
+#pubTable td:nth-child(1) {
+    width: 40px;   /* S.No */
+}
+
+#pubTable th:nth-child(2),
+#pubTable td:nth-child(2) {
+    width: 140px;  /* Authors */
+}
+
+#pubTable th:nth-child(3),
+#pubTable td:nth-child(3) {
+    width: 220px;  /* Title */
+}
+
+#pubTable th:nth-child(4),
+#pubTable td:nth-child(4) {
+    width: 140px;  /* Journal */
+}
+
+#pubTable th:nth-child(5),
+#pubTable td:nth-child(5) {
+    width: 70px;   /* Impact */
+}
+
+#pubTable th:nth-child(6),
+#pubTable td:nth-child(6) {
+    width: 70px;   /* Volume */
+}
+
+#pubTable th:nth-child(7),
+#pubTable td:nth-child(7) {
+    width: 70px;   /* Page */
+}
+
+#pubTable th:nth-child(8),
+#pubTable td:nth-child(8) {
+    width: 60px;   /* Year */
+}
+
+/* ROW STYLING */
 #pubTable tbody tr:nth-child(even) {
     background: #fafafa;
 }
@@ -95,7 +145,6 @@ ul {
 #pubTable tbody tr:hover {
     background: #f1f5f9;
 }
-
 /* SEARCH */
 #searchInput {
     margin: 15px 0;
