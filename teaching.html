@@ -1,354 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teaching - Dr. Munish Bhatia</title>
-
-<style>
-
-/* ===== BASE ===== */
-body {
-    margin: 0;
-    padding-top: 60px;
-    background: #f5f7f7;
-    font-family: Arial, sans-serif;
-}
-
-/* ===== TOPBAR ===== */
-.topbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background: #0f7a73;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    z-index: 1000;
-}
-
-.menu-icon {
-    position: absolute;
-    left: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 260px;
-    height: 100%;
-    background: #117c76;
-    padding-top: 60px;
-    transition: 0.3s;
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.sidebar a:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-
-/* ===== CONTAINER ===== */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* HEADINGS */
-h1 {
-    text-align: center;
-    color: #0f766e;
-    margin-bottom: 30px;
-}
-
-/* GRID */
-.teaching-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-}
-
-.card h2 {
-    color: #0f766e;
-    font-size: 18px;
-}
-
-/* SECTION CARD */
-.section {
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-/* LIST */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* ===== FOOTER FULL WIDTH ===== */
-.footer {
-    background: #0b4f54;
-    color: white;
-    padding: 60px 20px;
-
-    /* 🔥 FORCE FULL WIDTH */
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
-
-/* GRID LAYOUT */
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;          /* IMPORTANT: align top */
-    gap: 60px;
-
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* EACH BOX */
-.footer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* HEADINGS */
-.footer-box h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-/* PERFECT UNDERLINE (same width for all) */
-.footer-box h3::after {
-    content: "";
-    display: block;
-    width: 160px;        /* SAME WIDTH FOR ALL */
-    height: 2px;
-    background: #5fa9dd;
-    margin: 8px auto 0;
-}
-
-/* TEXT */
-.footer-box p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #d1e5e7;
-    margin-top: 10px;
-}
-
-/* MAP */
-.footer-box iframe {
-    width: 100%;
-    max-width: 300px;   /* CONTROL SIZE */
-    height: 180px;
-    border: none;
-    border-radius: 12px;
-    margin-top: 10px;
-}
-
-/* COPYRIGHT */
-.footer .copyright {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #cbd5d6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Dr. Munish Bhatia</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-<span class="menu-icon" onclick="openMenu()">☰</span>
-Dr. Munish Bhatia
-</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="header__logo">Dr. Munish <span>Bhatia</span></a>
+        <nav class="header__nav">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html" class="active">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="outreach.html">Outreach</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="header__menu-btn" aria-label="Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
+</header>
 
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-<span class="close-btn" onclick="closeMenu()">×</span>
-<a href="index.html">Home</a>
-<a href="research.html">Research</a>
-<a href="teaching.html">Teaching</a>
-<a href="publications.html">Publications</a>
-<a href="outreach.html">Outreach</a>
-<a href="services.html">Services</a>
-<a href="people.html">People</a>
-<a href="contact.html">Contact</a>
-</div>
+<nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html" class="active">Teaching</a>
+    <a href="publications.html">Publications</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-<!-- MAIN -->
-<div class="container">
+<!-- CONTENT -->
+<main class="page-enter">
+    <div class="container">
 
-<h1>Teaching Experience</h1>
+        <div class="page-header">
+            <span class="page-label">Academic Profile</span>
+            <h1>Teaching Experience</h1>
+        </div>
 
-<div class="teaching-grid">
+        <!-- Positions -->
+        <div class="teaching-grid">
+            <div class="card fade-in stagger-1">
+                <h3>Assistant Professor (Grade-I)</h3>
+                <p style="margin-bottom: var(--spacing-md);"><strong>NIT Kurukshetra</strong> &middot; Oct 2022 - Present</p>
+                <h5 style="margin-bottom: var(--spacing-sm);">Courses</h5>
+                <ul class="styled-list">
+                    <li>Computer Networks</li>
+                    <li>Interoperable Web Technologies</li>
+                    <li>Cloud Computing</li>
+                </ul>
+                <h5 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Activities</h5>
+                <ul class="styled-list">
+                    <li>Supervising Ph.D. and postgraduate students</li>
+                    <li>Research in Digital Twin, IoT, AI</li>
+                    <li>Mentoring real-world research projects</li>
+                </ul>
+            </div>
 
-<div class="card">
-<h2>Assistant Professor (Grade-I)<br>NIT Kurukshetra [Oct 2022 – Present]</h2>
+            <div class="card fade-in stagger-2">
+                <h3>Assistant Professor</h3>
+                <p style="margin-bottom: var(--spacing-md);"><strong>LPU Punjab</strong> &middot; 2019 - 2022</p>
+                <h5 style="margin-bottom: var(--spacing-sm);">Courses</h5>
+                <ul class="styled-list">
+                    <li>Computer Organization</li>
+                    <li>Cloud Computing & Virtualization</li>
+                </ul>
+                <h5 style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm);">Activities</h5>
+                <ul class="styled-list">
+                    <li>Guided CloudSim-based research modules</li>
+                    <li>Supervised projects in ML, IoT, Cloud</li>
+                </ul>
+            </div>
+        </div>
 
-<p><b>Courses:</b></p>
-<ul>
-<li>Computer Networks</li>
-<li>Interoperable Web Technologies</li>
-<li>Cloud Computing</li>
-</ul>
-
-<p><b>Activities:</b></p>
-<ul>
-<li>Supervising Ph.D. and postgraduate students</li>
-<li>Research in Digital Twin, IoT, AI</li>
-<li>Mentoring real-world research projects</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Assistant Professor<br>LPU Punjab [2019 – 2022]</h2>
-
-<p><b>Courses:</b></p>
-<ul>
-<li>Computer Organization</li>
-<li>Cloud Computing & Virtualization</li>
-</ul>
-
-<p><b>Activities:</b></p>
-<ul>
-<li>Guided CloudSim-based research modules</li>
-<li>Supervised projects in ML, IoT, Cloud</li>
-</ul>
-</div>
-
-</div>
-
-<div class="section">
-<h2>Teaching Philosophy</h2>
-<p>
-Dr. Munish Bhatia follows a <b>research-oriented and application-driven approach</b>,
-bridging theory with practical implementation.
-</p>
-<ul>
-<li>Use of modern tools (Python, simulation frameworks)</li>
-<li>Focus on innovation and critical thinking</li>
-<li>Interdisciplinary research in AI, Digital Twin, Cloud systems</li>
-<li>Preparation for academia and industry</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Student Supervision</h2>
-<ul>
-<li>Supervising <b>8 Ph.D. scholars</b></li>
-<li>Guided <b>11 MCA students</b></li>
-<li>Supporting research publications and development</li>
-</ul>
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- ADDRESS -->
-        <div class="footer-box">
-            <h3>Address</h3>
-            <p>
-                Department of Computer Applications<br>
-                National Institute of Technology Kurukshetra<br>
-                Kurukshetra – 136119<br>
-                Haryana, India
+        <!-- Teaching Philosophy -->
+        <div class="card fade-in" style="margin-bottom: var(--spacing-xl);">
+            <h3>Teaching Philosophy</h3>
+            <p style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                Dr. Munish Bhatia follows a <strong>research-oriented and application-driven approach</strong>, bridging theory with practical implementation.
             </p>
+            <ul class="styled-list">
+                <li>Use of modern tools (Python, simulation frameworks)</li>
+                <li>Focus on innovation and critical thinking</li>
+                <li>Interdisciplinary research in AI, Digital Twin, Cloud systems</li>
+                <li>Preparation for academia and industry</li>
+            </ul>
         </div>
 
-        <!-- LOCATION -->
-        <div class="footer-box">
-            <h3>Location</h3>
-
-            <iframe 
-                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                loading="lazy">
-            </iframe>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <p>Email: munish.bhatia@nitkkr.ac.in</p>
-            <p>Website: munish4428.github.io</p>
+        <!-- Student Supervision -->
+        <div class="card fade-in">
+            <h3>Student Supervision</h3>
+            <ul class="styled-list" style="margin-top: var(--spacing-md);">
+                <li>Supervising <strong>8 Ph.D. scholars</strong></li>
+                <li>Guided <strong>11 MCA students</strong></li>
+                <li>Supporting research publications and development</li>
+            </ul>
         </div>
 
     </div>
+</main>
 
-    <p class="copyright">
-        © 2026 Dr. Munish Bhatia. All Rights Reserved.
-    </p>
-
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4>Address</h4>
+                <p>Department of Computer Applications<br>National Institute of Technology Kurukshetra<br>Kurukshetra - 136119<br>Haryana, India</p>
+            </div>
+            <div class="footer__col">
+                <h4>Location</h4>
+                <iframe src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="NIT Kurukshetra Location"></iframe>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <p>Email: munish.bhatia@nitkkr.ac.in</p>
+                <p>Website: munish4428.github.io</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Dr. Munish Bhatia. All Rights Reserved.</p>
+        </div>
+    </div>
 </footer>
-<script>
-function openMenu() {
-    document.getElementById("sidebar").style.left = "0";
-}
 
-function closeMenu() {
-    document.getElementById("sidebar").style.left = "-260px";
-}
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
+
