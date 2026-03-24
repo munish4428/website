@@ -950,3 +950,40 @@ p {
         grid-template-columns: 1fr 1fr;
     }
 }
+/* AVAILABLE POSITIONS */
+.highlight-banner {
+    margin-top: 40px;
+    background: #e6f2f2;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.highlight-banner h2 {
+    color: #0f7c7c;
+    margin-bottom: 10px;
+}
+
+.positions {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.position-box {
+    flex: 1;
+}
+
+.position-box h4 {
+    margin-bottom: 8px;
+}
+
+.position-box ul {
+    padding-left: 18px;
+}
+
+/* CTA */
+.contact-cta {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0f7c7c;
+}
