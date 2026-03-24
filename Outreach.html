@@ -3,145 +3,214 @@
 <head>
   <title>Outreach - Dr. Munish Bhatia</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      background: #f5f6f7;
-      margin-left: 220px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #0b7a75;
-      margin-top: 30px;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 40px;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      width: 420px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .card h2 {
-      color: #0b7a75;
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-
-    .card ul {
-      padding-left: 18px;
-    }
-
-    .card ul li {
-      margin-bottom: 10px;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div id="header"></div>
-
-<h1>Outreach Activities</h1>
-
-<p style="text-align:center; max-width:800px; margin:auto;">
-Dr. Munish Bhatia actively contributes to the academic and research community through 
-invited talks, expert lectures, faculty development programs, and conference engagements, 
-promoting emerging technologies such as Artificial Intelligence, Digital Twin systems, 
-and Quantum Computing.
-</p>
-
-<div class="container">
-
-  <!-- 2024 -->
-  <div class="card">
-    <h2>2024 – Present</h2>
-    <ul>
-      <li>Session Chair – NCIESA-2024, NIT Kurukshetra</li>
-      <li>Expert Lecture – AI and Smart Systems, NIT Delhi</li>
-      <li>Expert Talk – Quantum Computing (AICTE-ATAL FDP), GNDEC</li>
-      <li>Invited Talk – Machine Learning Trends (IEEE Program)</li>
-    </ul>
-  </div>
-
-  <!-- 2023 -->
-  <div class="card">
-    <h2>2023</h2>
-    <ul>
-      <li>Guest Lecture – Cloud Computing, LPU</li>
-      <li>Guest Lecture – Research Writing, LPU</li>
-      <li>Guest Lecture – Quantum Computing Applications, LPU</li>
-      <li>Session Chair – ICCS-2023, LPU</li>
-    </ul>
-  </div>
-
-  <!-- 2022 -->
-  <div class="card">
-    <h2>2022 and Earlier</h2>
-    <ul>
-      <li>Technical sessions on IoT, ML, Cloud Computing</li>
-      <li>Lectures and training programs for students and faculty</li>
-      <li>Research mentoring and academic collaborations</li>
-    </ul>
-  </div>
-
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  Dr. Munish Bhatia
 </div>
 
-<!-- FOCUS AREAS -->
-<div class="section">
-  <h2>Outreach Focus Areas</h2>
-  <ul>
-    <li>Artificial Intelligence and Machine Learning</li>
-    <li>Digital Twin and Industry 4.0</li>
-    <li>Internet of Things (IoT)</li>
-    <li>Quantum Computing</li>
-    <li>Research Methodology and Scientific Writing</li>
-  </ul>
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <span class="close-btn" onclick="toggleMenu()">×</span>
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="publications.html">Publications</a>
+  <a href="outreach.html">Outreach</a>
+  <a href="services.html">Services</a>
+  <a href="people.html">People</a>
+  <a href="contact.html">Contact</a>
 </div>
+
+<!-- MAIN CONTENT -->
+<section class="highlights">
+
+  <div class="highlights-container">
+
+    <h1>Outreach Activities</h1>
+
+    <p style="margin-bottom: 25px;">
+      Dr. Munish Bhatia actively contributes to the academic and research community through 
+      invited talks, expert lectures, faculty development programs, and conference engagements, 
+      promoting emerging technologies such as Artificial Intelligence, Digital Twin systems, 
+      and Quantum Computing.
+    </p>
+
+    <!-- 2024 -->
+    <div class="highlight-item">
+      <div class="year">2024</div>
+      <div class="text">Session Chair – NCIESA-2024, NIT Kurukshetra</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Expert Lecture – AI and Smart Systems, NIT Delhi</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Expert Talk – Quantum Computing (AICTE-ATAL FDP), GNDEC</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Invited Talk – Machine Learning Trends (IEEE Program)</div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="highlight-item">
+      <div class="year">2023</div>
+      <div class="text">Guest Lecture – Cloud Computing, LPU</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Guest Lecture – Research Writing, LPU</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Guest Lecture – Quantum Computing Applications, LPU</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Session Chair – ICCS-2023, LPU</div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="highlight-item">
+      <div class="year">2022</div>
+      <div class="text">Technical sessions on IoT, ML, and Cloud Computing</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Lectures and training programs for students and faculty</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year"></div>
+      <div class="text">Research mentoring, collaborations, and curriculum development</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOCUS -->
+<section class="highlights">
+  <div class="highlights-container">
+
+    <h1>Outreach Focus Areas</h1>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Artificial Intelligence and Machine Learning</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Digital Twin and Industry 4.0</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Internet of Things (IoT)</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Quantum Computing</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Research Methodology and Scientific Writing</div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ENGAGEMENT -->
-<div class="section">
-  <h2>Academic & Community Engagement</h2>
-  <ul>
-    <li>Promoting research awareness and innovation culture</li>
-    <li>Supporting faculty development programs (FDPs)</li>
-    <li>Encouraging industry-academia collaboration</li>
-    <li>Mentoring students for research publications</li>
-  </ul>
-</div>
+<section class="highlights">
+  <div class="highlights-container">
+
+    <h1>Academic & Community Engagement</h1>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Promoting research awareness and innovation culture</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Supporting faculty development programs (FDPs)</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Encouraging industry-academia collaboration</div>
+    </div>
+
+    <div class="highlight-item">
+      <div class="year">•</div>
+      <div class="text">Mentoring students for research publications</div>
+    </div>
+
+  </div>
+</section>
 
 <!-- FOOTER -->
-<div id="footer"></div>
+<footer class="footer">
+  <div class="footer-container">
 
-<!-- LOAD HEADER & FOOTER -->
+    <div class="footer-box">
+      <h3>Address</h3>
+      <p>
+        Department of Computer Applications<br>
+        National Institute of Technology Kurukshetra<br>
+        Kurukshetra – 136119<br>
+        Haryana, India
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Location</h3>
+      <iframe 
+        src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+    </div>
+
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>
+        Email: munish.bhatia@nitkkr.ac.in<br>
+        Website: munish4428.github.io
+      </p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Dr. Munish Bhatia. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- SCRIPT -->
 <script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
+function toggleMenu() {
+  let sidebar = document.getElementById("sidebar");
+  if (sidebar.style.left === "0px") {
+    sidebar.style.left = "-260px";
+  } else {
+    sidebar.style.left = "0px";
+  }
+}
 </script>
 
 </body>
