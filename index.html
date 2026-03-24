@@ -4,204 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Munish Bhatia | Academic Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header class="header">
-    <div class="container nav">
-        <h2 class="logo">Dr. Munish Bhatia</h2>
+    <div class="container">
+        <a href="index.html" class="header__logo">Dr. Munish <span>Bhatia</span></a>
+
+        <nav class="header__nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="research.html">Research</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="publications.html">Publications</a>
+            <a href="outreach.html">Outreach</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="header__menu-btn" aria-label="Menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
     </div>
 </header>
 
-<!-- ===== MAIN LAYOUT ===== -->
-<div class="main-layout">
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="publications.html">Publications</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="sidebar">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="publication.html">Publications</a></li>
-            <li><a href="Outreach.html">Outreach</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="people.html">People</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </aside>
+<!-- HERO -->
+<section class="hero page-enter">
+    <div class="container">
+        <div class="hero__inner">
 
-    <!-- ===== CONTENT ===== -->
-    <main class="content">
+            <aside class="hero__sidebar fade-in-left">
+                <img src="assets/pp.jpg" class="hero__avatar" alt="Dr. Munish Bhatia">
+                <h3 class="hero__name">Dr. Munish Bhatia</h3>
+                <p class="hero__title">
+                    Assistant Professor (Grade-I)<br>
+                    Department of Computer Applications<br>
+                    NIT Kurukshetra, India
+                </p>
 
-        <!-- HERO -->
-<section class="hero">
+                <div class="hero__socials">
+                    <a href="https://orcid.org/0000-0001-9878-7646" target="_blank" title="ORCID">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg" alt="ORCID">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=YQQPA2AAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+                    </a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57190168274" target="_blank" title="Scopus">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/scopus.svg" alt="Scopus">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dr-munish-bhatia-bb85a6111/" target="_blank" title="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Munish-Bhatia/2" target="_blank" title="ResearchGate">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate">
+                    </a>
+                </div>
 
-    <div class="hero-container">
+                <div class="openings fade-in stagger-3">
+                    <h4>Openings</h4>
+                    <p><strong>PhDs and Research Interns:</strong> Applications are invited in Digital Twin, AI/IoT, Cloud-Fog Computing, and Quantum Computing.</p>
+                    <a href="mailto:munish.bhatia@nitkkr.ac.in" class="btn btn--primary btn--sm">Send Enquiry</a>
+                </div>
+            </aside>
 
-        <!-- LEFT SIDE -->
-        <div class="left-panel">
-
-            <img src="pp.jpg" class="profile-img" alt="Profile">
-
-            <h2>Dr. Munish Bhatia</h2>
-            <p>Assistant Professor (Grade-I)</p>
-            <p>Department of Computer Applications</p>
-            <p>NIT Kurukshetra, India</p>
-
-            <!-- SOCIAL ICONS -->
-            <div class="socials">
-
-                <a href="https://orcid.org/0000-0001-9878-7646" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg">
-                </a>
-
-                <a href="https://scholar.google.com/citations?user=YQQPA2AAAAAJ&hl=en" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg">
-                </a>
-
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57190168274" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/scopus.svg">
-                </a>
-
-                <a href="https://www.linkedin.com/in/dr-munish-bhatia-bb85a6111/" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg">
-                </a>
-
-                <a href="https://www.researchgate.net/profile/Munish-Bhatia/2" target="_blank">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg">
-                </a>
-
-            </div>
-
-            <!-- OPENINGS -->
-            <div class="openings">
-                <h2>Openings</h2>
-                <p><strong>PhDs and Research Interns:</strong> Applications are invited in Digital Twin, AI/IoT, Cloud–Fog Computing, and Quantum Computing.</p>
-                <a href="mailto:munish.bhatia@nitkkr.ac.in">Send enquiry</a>
+            <div class="hero__content fade-in-right">
+                <span class="page-label">About</span>
+                <h1>Short Bio</h1>
+                <p>
+                    Dr. Munish Bhatia is an Assistant Professor (Grade-I) at the National Institute of Technology Kurukshetra, India, with over 10 years of research experience in Internet of Things (IoT), artificial intelligence, digital twin technology, and cloud-fog computing. He earned his Ph.D. in Computer Science and Engineering from Guru Nanak Dev University and previously served as a Project Engineer (Scientist) at IIT Mandi under the FarmerZone project. He has been recognized among the world's top 2% scientists by Stanford University for four consecutive years (2022-2025).
+                </p>
+                <p>
+                    He has authored more than 120 Scopus-indexed publications, accumulating over 2300 citations with an h-index of 27, and has published in leading journals such as IEEE Internet of Things Journal, ACM Transactions, and Artificial Intelligence Review. His research focuses on secure and intelligent IoT systems, AI-driven predictive modeling, quantum-inspired optimization, and digital twin-enabled applications across healthcare, smart cities, and industrial systems.
+                </p>
+                <p>
+                    Dr. Bhatia has secured multiple funded research projects from national and international agencies, including ANRF, Microsoft AI for Earth, and MeitY, and holds several granted patents in smart systems and healthcare technologies. He actively supervises Ph.D. and postgraduate students and serves as an Associate Editor of the IEEE Internet of Things Journal, contributing to the advancement of next-generation intelligent systems.
+                </p>
             </div>
 
         </div>
-
-        <!-- RIGHT SIDE -->
-        <div class="right-panel">
-
-            <h1>Short Bio</h1>
-
-            <p>
-               Dr. Munish Bhatia is an Assistant Professor (Grade-I) at the National Institute of Technology Kurukshetra, India, with over 10 years of research experience in Internet of Things (IoT), artificial intelligence, digital twin technology, and cloud–fog computing. He earned his Ph.D. in Computer Science and Engineering from Guru Nanak Dev University and previously served as a Project Engineer (Scientist) at IIT Mandi under the FarmerZone project. He has been recognized among the world’s top 2% scientists by Stanford University for four consecutive years (2022–2025).
-
-He has authored more than 120 Scopus-indexed publications, accumulating over 2300 citations with an h-index of 27, and has published in leading journals such as IEEE Internet of Things Journal, ACM Transactions, and Artificial Intelligence Review. His research focuses on secure and intelligent IoT systems, AI-driven predictive modeling, quantum-inspired optimization, and digital twin-enabled applications across healthcare, smart cities, and industrial systems.
-
-Dr. Bhatia has secured multiple funded research projects from national and international agencies, including ANRF, Microsoft AI for Earth, and MeitY, and holds several granted patents in smart systems and healthcare technologies. He actively supervises Ph.D. and postgraduate students and serves as an Associate Editor of the IEEE Internet of Things Journal, contributing to the advancement of next-generation intelligent systems.
-            </p>
-
-        </div>
-
     </div>
-
 </section>
 
-        <!-- HIGHLIGHTS -->
-     <section class="section highlights-section">
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+    <div class="container">
+        <h2 class="highlights__title fade-in">Highlights</h2>
 
-    <h2 class="section-title">Highlights</h2>
+        <div class="highlights__grid">
+            <div class="highlight-card fade-in stagger-1">
+                <ul>
+                    <li>
+                        <strong>Top 2% Scientist Worldwide</strong>
+                        <span>Stanford University (2022-2025)</span>
+                    </li>
+                    <li>
+                        <strong>120+ Research Publications</strong>
+                        <span>Including 100+ SCI/SCIE indexed journals</span>
+                    </li>
+                    <li>
+                        <strong>2300+ Citations</strong>
+                        <span>h-index: 27 (Google Scholar)</span>
+                    </li>
+                    <li>
+                        <strong>Cumulative Impact Factor > 693</strong>
+                        <span>Average IF ~ 6.8</span>
+                    </li>
+                    <li>
+                        <strong>50+ First-Author Papers</strong>
+                        <span>12 Single-author SCI publications</span>
+                    </li>
+                </ul>
+            </div>
 
-    <div class="highlights-container">
-
-        <!-- LEFT COLUMN -->
-        <div class="highlight-box">
-            <ul>
-                <li><strong>Top 2% Scientist Worldwide</strong><br>
-                Stanford University (2022–2025)</li>
-
-                <li><strong>120+ Research Publications</strong><br>
-                Including 100+ SCI/SCIE indexed journals</li>
-
-                <li><strong>2300+ Citations</strong><br>
-                h-index: 27 (Google Scholar)</li>
-
-                <li><strong>Cumulative Impact Factor &gt; 693</strong><br>
-                Average IF ≈ 6.8</li>
-
-                <li><strong>50+ First-Author Papers</strong><br>
-                12 Single-author SCI publications</li>
-            </ul>
+            <div class="highlight-card fade-in stagger-2">
+                <ul>
+                    <li>
+                        <strong>Published in Leading Venues</strong>
+                        <span>IEEE, Elsevier, Springer, ACM</span>
+                    </li>
+                    <li>
+                        <strong>Associate Editor</strong>
+                        <span>IEEE Internet of Things Journal</span>
+                    </li>
+                    <li>
+                        <strong>Funded Research Projects</strong>
+                        <span>Microsoft (AI for Earth), ANRF, MeitY</span>
+                    </li>
+                    <li>
+                        <strong>Research Supervision</strong>
+                        <span>Ph.D. and Postgraduate students</span>
+                    </li>
+                    <li>
+                        <strong>Core Expertise</strong>
+                        <span>Digital Twin, IoT, AI/ML, Quantum Computing, Cloud-Fog Systems</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="highlight-box">
-            <ul>
-                <li><strong>Published in Leading Venues</strong><br>
-                IEEE, Elsevier, Springer, ACM</li>
-
-                <li><strong>Associate Editor</strong><br>
-                IEEE Internet of Things Journal</li>
-
-                <li><strong>Funded Research Projects</strong><br>
-                Microsoft (AI for Earth), ANRF, MeitY</li>
-
-                <li><strong>Research Supervision</strong><br>
-                Ph.D. and Postgraduate students</li>
-
-                <li><strong>Core Expertise</strong><br>
-                Digital Twin, IoT, AI/ML, Quantum Computing, Cloud–Fog Systems</li>
-            </ul>
-        </div>
-
     </div>
-
 </section>
 
-
-    </main>
-</div>
-
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="footer">
-
-    <div class="footer-container">
-
-        <div class="footer-box">
-            <h3>Address</h3>
-            <p>
-                Department of Computer Applications<br>
-                NIT Kurukshetra<br>
-                Haryana, India
-            </p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Location</h3>
-            <iframe 
-                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed">
-            </iframe>
-        </div>
-
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <p>Email: munish.bhatia@nitkkr.ac.in</p>
-            <p>Website: munish4428.github.io</p>
-
-            <div class="footer-socials">
-                <a href="https://orcid.org/0000-0001-9878-7646" target="_blank">ORCID</a>
-                <a href="https://scholar.google.com/citations?user=YQQPA2AAAAAJ&hl=en" target="_blank">Scholar</a>
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57190168274" target="_blank">Scopus</a>
-                <a href="https://www.linkedin.com/in/dr-munish-bhatia-bb85a6111/" target="_blank">LinkedIn</a>
-                <a href="https://www.researchgate.net/profile/Munish-Bhatia/2" target="_blank">ResearchGate</a>
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__col">
+                <h4>Address</h4>
+                <p>
+                    Department of Computer Applications<br>
+                    NIT Kurukshetra<br>
+                    Haryana, India
+                </p>
             </div>
-
+            <div class="footer__col">
+                <h4>Location</h4>
+                <iframe
+                    src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    title="NIT Kurukshetra Location">
+                </iframe>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <p>Email: munish.bhatia@nitkkr.ac.in</p>
+                <p>Website: munish4428.github.io</p>
+                <div style="margin-top: 12px;">
+                    <a href="https://orcid.org/0000-0001-9878-7646" target="_blank">ORCID</a>
+                    <a href="https://scholar.google.com/citations?user=YQQPA2AAAAAJ&hl=en" target="_blank">Scholar</a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57190168274" target="_blank">Scopus</a>
+                    <a href="https://www.linkedin.com/in/dr-munish-bhatia-bb85a6111/" target="_blank">LinkedIn</a>
+                    <a href="https://www.researchgate.net/profile/Munish-Bhatia/2" target="_blank">ResearchGate</a>
+                </div>
+            </div>
         </div>
-
+        <div class="footer__bottom">
+            <p>&copy; 2026 Dr. Munish Bhatia</p>
+        </div>
     </div>
-
-    <p class="copyright">
-        © 2026 Dr. Munish Bhatia
-    </p>
-
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
