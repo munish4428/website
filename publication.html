@@ -1577,61 +1577,44 @@ Publications in leading journals and conferences including <b>IEEE, Elsevier, Sp
 
     <div class="footer-container">
 
-        <!-- ABOUT -->
+        <!-- ADDRESS -->
         <div class="footer-box">
-            <h3>About</h3>
+            <h3>Address</h3>
+            <div class="underline"></div>
             <p>
-                Dr. Munish Bhatia is an Assistant Professor at NIT Kurukshetra.
-                His research focuses on Digital Twin, IoT, AI, and Quantum Computing.
+                Computer Science Building<br>
+                National Institute of Technology<br>
+                Kurukshetra, Haryana, India
             </p>
+        </div>
+
+        <!-- LOCATION (MAP) -->
+        <div class="footer-box">
+            <h3>Location</h3>
+            <div class="underline"></div>
+            <iframe 
+                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                loading="lazy">
+            </iframe>
         </div>
 
         <!-- CONTACT -->
         <div class="footer-box">
             <h3>Contact</h3>
+            <div class="underline"></div>
             <p>
                 Email: munish@nitkkr.ac.in<br>
-                NIT Kurukshetra, Haryana, India
+                Website: yourusername.github.io
             </p>
-        </div>
-
-        <!-- LOCATION -->
-        <div class="footer-box">
-            <h3>Location</h3>
-            <iframe 
-                src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed">
-            </iframe>
         </div>
 
     </div>
 
     <div class="copyright">
-        © 2026 Dr. Munish Bhatia | Academic Portfolio
+        © 2026 Dr. Munish Bhatia. All Rights Reserved.
     </div>
 
 </div>
-
-</div>
-
-<script>
-document.getElementById("searchInput").addEventListener("keyup", function() {
-    let value = this.value.toLowerCase();
-    let rows = document.querySelectorAll("#pubTable tbody tr");
-
-    rows.forEach(row => {
-        row.style.display = row.innerText.toLowerCase().includes(value) ? "" : "none";
-    });
-});
-
-function openMenu() {
-    document.getElementById("sidebar").style.left = "0";
-}
-
-function closeMenu() {
-    document.getElementById("sidebar").style.left = "-260px";
-}
-</script>
-
 </body>
 </html>
 
