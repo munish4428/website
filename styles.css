@@ -247,3 +247,8 @@
 .footer-socials a:hover {
     color: white;
 }
+.socials img {
+    width: 20px;   /* adjust size here */
+    height: 20px;
+    margin: 6px;
+}
