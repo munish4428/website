@@ -195,7 +195,7 @@
 
 /* SOCIAL ICONS */
 .socials img {
-    width: 24px;
+    width: 16px;
     margin: 8px;
     filter: grayscale(100%);
     transition: 0.3s;
@@ -247,8 +247,4 @@
 .footer-socials a:hover {
     color: white;
 }
-.socials img {
-    width: 20px;   /* adjust size here */
-    height: 20px;
-    margin: 6px;
-}
+
