@@ -1,25 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact - Dr. Munish Bhatia</title>
-  <link rel="stylesheet" href="style.css">
-  <section class="hero">
-    <div class="bio-box">
-        <h1>Contact</h1>
+<title>Contact - Dr. Munish Bhatia</title>
 
-        <p>Email: munish.bhatia@nitkkr.ac.in</p>
-    </div>
-</section>
+<style>
+
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    padding-top: 60px;
+    background: #f5f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: #0f7a73;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    position: absolute;
+    left: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #117c76;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-top: 15px;
+}
+
+/* MAP */
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+.footer {
+    background: #0b4f54;
+    color: white;
+    padding: 60px 20px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    text-align: center;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- TOPBAR -->
+<div class="topbar">
+<span class="menu-icon" onclick="openMenu()">☰</span>
+Dr. Munish Bhatia
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+<span class="close-btn" onclick="closeMenu()">×</span>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="teaching.html">Teaching</a>
+<a href="publications.html">Publications</a>
+<a href="outreach.html">Outreach</a>
+<a href="services.html">Services</a>
+<a href="people.html">People</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<!-- ===== YOUR ORIGINAL CONTENT (UNCHANGED, ONLY WRAPPED) ===== -->
+
+<div class="container">
+
+<section class="hero">
+<div class="card">
+<div class="bio-box">
+<h1>Contact</h1>
+
+<p>Email: munish.bhatia@nitkkr.ac.in</p>
+</div>
+</div>
+</section>
+
+<div class="card">
 <h1>Contact</h1>
 
 <p>
 <a href="index.html">Home</a>
 </p>
+</div>
 
+<div class="card">
 <h2>Address</h2>
 
 <p>
@@ -27,17 +156,18 @@ Department of Computer Applications<br>
 National Institute of Technology Kurukshetra<br>
 Kurukshetra, Haryana, India
 </p>
+</div>
 
+<div class="card">
 <h2>Location</h2>
 
 <!-- Google Maps Embed -->
 <iframe 
-  src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed"
-  width="100%" 
-  height="300" 
-  style="border:0;">
+src="https://maps.google.com/maps?q=NIT%20Kurukshetra&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
+</div>
 
+<div class="card">
 <h2>Contact</h2>
 
 <p>
@@ -45,10 +175,29 @@ Email: munish [dot] bhatia [at] nitkkr [dot] ac [dot] in <br><br>
 Phone: +91-7837180829 <br><br>
 Website: https://yourwebsite.github.io
 </p>
+</div>
 
+<div class="card">
 <p>
 © 2026 Dr. Munish Bhatia. All Rights Reserved.
 </p>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Dr. Munish Bhatia. All Rights Reserved.
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("sidebar").style.left = "0";
+}
+function closeMenu() {
+    document.getElementById("sidebar").style.left = "-260px";
+}
+</script>
 
 </body>
 </html>
