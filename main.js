@@ -55,54 +55,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ===== VISITOR COUNTER =====
-document.addEventListener("DOMContentLoaded", function () {
-
+    console.log("Visitor counter script loaded.");
     const counterElement = document.getElementById("visitor-count");
-    if (!counterElement) return;
+    if (counterElement) {
+        const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
 
-    const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
+        // If already counted in this session → only fetch value
+        if (sessionStorage.getItem("visited")) {
+            fetch(BASE_URL)
+                .then(res => res.json())
+                .then(data => {
+                    counterElement.innerText = (data.data.up_count|| 0).toLocaleString();
+                })
+                .catch(() => {
+                    counterElement.innerText = "—";
+                });
+        } else {
+            // First visit → increment counter
+            fetch(BASE_URL + "/up")
+                .then(res => res.json())
+                .then(data => {
+                    sessionStorage.setItem("visited", "true");
 
-    // If already counted in this session → only fetch value
-    if (sessionStorage.getItem("visited")) {
-        fetch(BASE_URL)
-            .then(res => res.json())
-            .then(data => {
-                counterElement.innerText = (data.data.up || 0).toLocaleString();
-            })
-            .catch(() => {
-                counterElement.innerText = "—";
-            });
-        return;
+                    let count = 0;
+                    const target = data.data.up || 0;
+
+                    // Smooth animation
+                    const interval = setInterval(() => {
+                        count += Math.ceil(target / 50);
+
+                        if (count >= target) {
+                            count = target;
+                            clearInterval(interval);
+                        }
+
+                        counterElement.innerText = count.toLocaleString();
+                    }, 20);
+                })
+                .catch(() => {
+                    counterElement.innerText = "—";
+                });
+        }
     }
-
-    // First visit → increment counter
-    fetch(BASE_URL + "/up")
-        .then(res => res.json())
-        .then(data => {
-
-            sessionStorage.setItem("visited", "true");
-
-            let count = 0;
-            let target = data.data.up || 0;
-
-            // Smooth animation
-            let interval = setInterval(() => {
-                count += Math.ceil(target / 50);
-
-                if (count >= target) {
-                    count = target;
-                    clearInterval(interval);
-                }
-
-                counterElement.innerText = count.toLocaleString();
-            }, 20);
-
-        })
-        .catch(() => {
-            counterElement.innerText = "—";
-        });
-
-});
 
     
     // Active nav link highlight
