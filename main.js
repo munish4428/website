@@ -59,7 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const counterElement = document.getElementById("visitor-count");
     if (counterElement) {
 
-        const target = data.data.up || 0;
+       
+        const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
+
+        // If already counted in this session → only fetch value
+        if (sessionStorage.getItem("visited")) {
+            fetch(BASE_URL)
+                .then(res => res.json())
+                .then(data => {
+                     const target = data.data.up || 0;
 
 // Start near final value (prevents 0 flash)
 let count = Math.max(target - 50, 0);
@@ -74,14 +82,6 @@ const interval = setInterval(() => {
 
     counterElement.innerText = count.toLocaleString();
 }, 20);
-        const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
-
-        // If already counted in this session → only fetch value
-        if (sessionStorage.getItem("visited")) {
-            fetch(BASE_URL)
-                .then(res => res.json())
-                .then(data => {
-                    counterElement.innerText = (data.data.up_count|| 0).toLocaleString();
                 })
                 .catch(() => {
                     counterElement.innerText = "—";
