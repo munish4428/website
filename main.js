@@ -64,7 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // If already visited in this session → only fetch value
     if (sessionStorage.getItem("visited")) {
-        fetch(BASE_URL)
+        fetch(BASE_URL, {
+    headers: {
+        "Authorization": "Bearer ut_ycKANNXOG6zBKSpOxu6VOFUdu1431sVGoUyDpCAe"
+    }
+})
             .then(res => res.json())
             .then(data => {
                 counterElement.innerText = (data.data.up || 0).toLocaleString();
@@ -76,7 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // First visit → increment counter
-    fetch(BASE_URL + "/up")
+    fetch(BASE_URL + "/up", {
+    headers: {
+        "Authorization": "Bearer ut_ycKANNXOG6zBKSpOxu6VOFUdu1431sVGoUyDpCAe"
+    }
+})
         .then(res => res.json())
         .then(data => {
 
