@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             clearInterval(interval);
                         }
 
-                        counterElement.innerText = count.toLocaleString();
+                        counterElement.innerText = target.toLocaleString();
                     }, 20);
                 })
                 .catch(() => {
