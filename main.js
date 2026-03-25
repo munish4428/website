@@ -54,6 +54,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ===== VISITOR COUNTER =====
+document.addEventListener("DOMContentLoaded", function () {
+
+    fetch('https://api.countapi.xyz/hit/munish-website/visits')
+        .then(res => res.json())
+        .then(data => {
+
+            let count = 0;
+            let target = data.value;
+
+            let counterElement = document.getElementById('visitor-count');
+
+            // Safety check (important for multi-page site)
+            if (!counterElement) return;
+
+            let interval = setInterval(() => {
+                count += Math.ceil(target / 50);
+
+                if (count >= target) {
+                    count = target;
+                    clearInterval(interval);
+                }
+
+                counterElement.innerText = count.toLocaleString();
+            }, 20);
+
+        })
+        .catch(err => {
+            console.error("Visitor counter error:", err);
+        });
+
+});
+
+    
     // Active nav link highlight
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.header__nav a, .mobile-nav a').forEach(function (link) {
