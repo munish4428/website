@@ -62,13 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
 
-    // If already visited in this session → only fetch value
+    // If already counted in this session → only fetch value
     if (sessionStorage.getItem("visited")) {
-        fetch(BASE_URL, {
-    headers: {
-        "Authorization": "Bearer ut_ycKANNXOG6zBKSpOxu6VOFUdu1431sVGoUyDpCAe"
-    }
-})
+        fetch(BASE_URL)
             .then(res => res.json())
             .then(data => {
                 counterElement.innerText = (data.data.up || 0).toLocaleString();
@@ -80,11 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // First visit → increment counter
-    fetch(BASE_URL + "/up", {
-    headers: {
-        "Authorization": "Bearer ut_ycKANNXOG6zBKSpOxu6VOFUdu1431sVGoUyDpCAe"
-    }
-})
+    fetch(BASE_URL + "/up")
         .then(res => res.json())
         .then(data => {
 
@@ -93,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let count = 0;
             let target = data.data.up || 0;
 
-            // Smooth counting animation
+            // Smooth animation
             let interval = setInterval(() => {
                 count += Math.ceil(target / 50);
 
