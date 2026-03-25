@@ -116,7 +116,7 @@ h4 { font-size: var(--font-size-xl); }
 h5 { font-size: var(--font-size-lg); }
 
 p {
-    color: var(--color-text-secondary);
+    color: #000000;
     line-height: 1.7;
 }
 
@@ -171,7 +171,7 @@ p {
     left: 0;
     right: 0;
     height: var(--header-height);
-    background: var(--color-white);
+    background: #d4deeb;
     border-bottom: 1px solid var(--color-border);
     z-index: 1000;
     display: flex;
