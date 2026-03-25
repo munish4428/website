@@ -57,18 +57,35 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===== VISITOR COUNTER =====
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetch('https://api.countapi.xyz/hit/munish-website/visits')
+    const counterElement = document.getElementById("visitor-count");
+    if (!counterElement) return;
+
+    const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
+
+    // If already visited in this session → only fetch value
+    if (sessionStorage.getItem("visited")) {
+        fetch(BASE_URL)
+            .then(res => res.json())
+            .then(data => {
+                counterElement.innerText = (data.data.up || 0).toLocaleString();
+            })
+            .catch(() => {
+                counterElement.innerText = "—";
+            });
+        return;
+    }
+
+    // First visit → increment counter
+    fetch(BASE_URL + "/up")
         .then(res => res.json())
         .then(data => {
 
+            sessionStorage.setItem("visited", "true");
+
             let count = 0;
-            let target = data.value;
+            let target = data.data.up || 0;
 
-            let counterElement = document.getElementById('visitor-count');
-
-            // Safety check (important for multi-page site)
-            if (!counterElement) return;
-
+            // Smooth counting animation
             let interval = setInterval(() => {
                 count += Math.ceil(target / 50);
 
@@ -81,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 20);
 
         })
-        .catch(err => {
-            console.error("Visitor counter error:", err);
+        .catch(() => {
+            counterElement.innerText = "—";
         });
 
 });
