@@ -294,7 +294,7 @@ p {
 }
 
 .card p {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-base);
 }
 
 .card-grid {
