@@ -652,7 +652,7 @@ p {
 .data-table .col-if { width: 70px; text-align: center; }
 .data-table .col-vol { width: 70px; text-align: center; }
 .data-table .col-page { width: 80px; text-align: center; }
-.data-table .col-year { width: 60px; text-align: center; font-weight: 600; color: var(--color-text); }
+.data-table .col-year { width: 60px; text-align: center; font-weight: 600; color: #ededed; }
 
 /* ================================================
    SEARCH INPUT
