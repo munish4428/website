@@ -54,18 +54,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ===== VISITOR COUNTER =====
+// ===== VISITOR COUNTER =====
     console.log("Visitor counter script loaded.");
     const counterElement = document.getElementById("visitor-count");
     if (counterElement) {
         const BASE_URL = "https://api.counterapi.dev/v2/charuls-team-3457/first-counter-3457";
 
+        // Safely check sessionStorage to prevent tracking prevention errors
+        let hasVisited = false;
+        try {
+            hasVisited = sessionStorage.getItem("visited");
+        } catch (e) {
+            console.warn("sessionStorage access blocked:", e);
+        }
+
         // If already counted in this session → only fetch value
-        if (sessionStorage.getItem("visited")) {
+        if (hasVisited) {
             fetch(BASE_URL)
                 .then(res => res.json())
                 .then(data => {
-                    counterElement.innerText = (data.data.up_count|| 0).toLocaleString();
+                    counterElement.innerText = (data.data.up_count || 0).toLocaleString();
                 })
                 .catch(() => {
                     counterElement.innerText = "—";
@@ -75,10 +83,14 @@ document.addEventListener('DOMContentLoaded', function () {
             fetch(BASE_URL + "/up")
                 .then(res => res.json())
                 .then(data => {
-                    sessionStorage.setItem("visited", "true");
+                    try {
+                        sessionStorage.setItem("visited", "true");
+                    } catch (e) {
+                        console.warn("sessionStorage set blocked:", e);
+                    }
 
                     let count = 0;
-                    const target = data.data.up || 0;
+                    const target = data.data.up_count || 0;
 
                     // Smooth animation
                     const interval = setInterval(() => {
@@ -89,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             clearInterval(interval);
                         }
 
-                        counterElement.innerText = target.toLocaleString();
+                        counterElement.innerText = count.toLocaleString();
                     }, 20);
                 })
                 .catch(() => {
