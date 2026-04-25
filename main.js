@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         count += Math.ceil(target / 50);
 
                         if (count >= target) {
-                            count = target + 50000;
+                            count = target + 2000;
                             clearInterval(interval);
                         }
 
