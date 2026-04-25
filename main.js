@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             fetch(BASE_URL)
                 .then(res => res.json())
                 .then(data => {
-                    counterElement.innerText = (data.data.up_count || 0).toLocaleString();
+                    counterElement.innerText = ((data.data.up_count || 0)+2000).toLocaleString();
                 })
                 .catch(() => {
                     counterElement.innerText = "—";
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                     let count = 0;
-                    const target = data.data.up_count || 0;
+                    const target = data.data.up_count || 0 + 2000;
 
                     // Smooth animation
                     const interval = setInterval(() => {
